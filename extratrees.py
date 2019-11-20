@@ -13,6 +13,6 @@ y_test_preds = etc.predict_proba(X_test_tf)[:, 1]
 
 print('Extra Trees Classifier')
 print('Training:')
-etc_train_auc, etc_train_accuracy, etc_train_recall, etc_train_precision,etc_train_specificity = print_report(y_train, y_train_preds, 0.5)
+etc_train_auc, etc_train_accuracy, etc_train_recall, etc_train_precision = print_report(y_train, y_train_preds, 0.5)
 print('Testing:')
-etc_valid_auc, etc_valid_accuracy, etc_valid_recall, etc_valid_precision, etc_valid_specificity = print_report(y_valid, y_valid_preds, 0.5)
+etc_test_auc, etc_test_accuracy, etc_test_recall, etc_test_precision = print_report(y_valid, y_valid_preds, 0.5)
