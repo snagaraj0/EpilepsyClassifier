@@ -25,10 +25,10 @@ df_train = df.drop(df_balance.index)
 #for training we need to balance out yes epilepsy and no epilepsy results so our classifier doesn't get skewed either way.
 rows = df_train.output == 1
 #positive and negative results
-df_yes = df_train_all.loc[rows]
-df_no = df_train_all.loc[~rows]
+df_yes = df_train.loc[rows]
+df_no = df_train.loc[~rows]
 
-n = np.min([len(df_yes), len(df_no])
+n = np.min([len(df_yes), len(df_no)])
 
 # put together yes no results
 df_train_all = pd.concat([df_yes.sample(n=n, random_state=42), df_no.sample(n=n, random_state=42)], axis=0, ignore_index=True)
