@@ -47,7 +47,7 @@ X_train_all = df_train_all[column_inputs].values
 X_test = df_test[column_inputs].values
             
 y_train = df_train['output'].values
-
+y_test = df_test['output'].values
 
 from sklearn.preprocessing import StandardScaler
 scaler  = StandardScaler()
