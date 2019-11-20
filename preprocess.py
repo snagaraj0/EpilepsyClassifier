@@ -32,7 +32,7 @@ n = np.min([len(df_yes), len(df_no)])
 
 # put together yes no results
 df_train_all = pd.concat([df_yes.sample(n=n, random_state=42), df_no.sample(n=n, random_state=42)], axis=0, ignore_index=True)
-df_train_all = df_train_all.sample(n=len(df_train), random_state=42).reset_index(drop=True)
+df_train_all = df_train_all.sample(n=len(df_train_all), random_state=42).reset_index(drop=True)
 
 df_test.to_csv('test.csv', index=False)
 df_train.to_csv('train.csv', index=False)
