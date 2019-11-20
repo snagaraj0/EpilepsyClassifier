@@ -1,5 +1,5 @@
 import pandas as pd
-df_results = pd.DataFrame({'classifier':['KNN', 'Logistic', 'SGD', 'ExtraTrees'], 'auc':[knn_train_auc, knn_test_auc, lr_train_auc, lr_test_auc, sgd_train_auc, sgd_test_auc, etc_train_auc, etc_test_auc]})
+df_results = pd.DataFrame({'classifier':['KNN', 'Logistic', 'SGD', 'ExtraTrees'], 'data-set':['train', 'valid']*4, 'auc':[knn_train_auc, knn_test_auc, lr_train_auc, lr_test_auc, sgd_train_auc, sgd_test_auc, etc_train_auc, etc_test_auc]})
 import seaborn as sb
 import matplotlib.pyplot as plt
 sb.set(style="whitegrid")
