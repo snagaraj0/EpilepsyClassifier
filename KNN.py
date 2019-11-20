@@ -12,7 +12,7 @@ print('KNN')
 print('Training:')
 knn_train_auc, knn_train_accuracy, knn_train_recall, knn_train_precision = print_report(y_train,y_train_preds, 0.5)
 print('Testing:')
-knn_testing_auc, knn_testing_accuracy, knn_testing_recall, knn_testing_precision = print_report(y_test,y_test_preds, 0.5)
+knn_test_auc, knn_test_accuracy, knn_test_recall, knn_test_precision = print_report(y_test,y_test_preds, 0.5)
 
 from sklearn.metrics import roc_auc_score, accuracy_score, precision_score, recall_score
 def print_report(y_actual, y_pred, thresh):
