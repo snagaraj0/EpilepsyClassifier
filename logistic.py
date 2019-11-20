@@ -7,9 +7,9 @@ y_test_preds = lr.predict_proba(X_test_tf)[:,1]
 
 print('Logistic Regression')
 print('Training:')
-lr_train_auc, lr_train_accuracy, lr_train_recall, lr_train_precision, lr_train_specificity = print_report(y_train,y_train_preds, 0.5)
+lr_train_auc, lr_train_accuracy, lr_train_recall, lr_train_precision = print_report(y_train,y_train_preds, 0.5)
 print('Testing:')
-lr_valid_auc, lr_valid_accuracy, lr_valid_recall, lr_valid_precision, lr_valid_specificity = print_report(y_valid,y_valid_preds, 0.5)
+lr_test_auc, lr_test_accuracy, lr_test_recall, lr_test_precision = print_report(y_valid,y_valid_preds, 0.5)
 
 from sklearn.metrics import roc_auc_score, accuracy_score, precision_score, recall_score
 def print_report(y_actual, y_pred, thresh):
